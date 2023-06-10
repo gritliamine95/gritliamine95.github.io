@@ -11,6 +11,7 @@ button {
   color: white;
   border: none;
   border-radius: 5px;
+  
 }
 
 button:hover {
@@ -22,18 +23,21 @@ button:hover {
   background-color: #ff0000;
   color: #ffffff;
   position: center;
+  
 }
 
-.gobacks-button {
-  margin-top: 70px;
+.gobacks-button{
+margin-top: 70px;
   background-color: #ff0000;
   color: #ffffff;
-  margin-left: 45.5%;
+  margin-left: 45.5%;	
 }
+
+
 
 body {
   background-image: url("background.jfif");
-  background-size: 150% 150%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
 }
