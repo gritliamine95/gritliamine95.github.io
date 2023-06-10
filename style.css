@@ -1,12 +1,12 @@
 .container {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20px; /* Decrease the margin for better mobile layout */
 }
 
 button {
   margin: 10px;
-  padding: 15px 30px;
-  font-size: 20px;
+  padding: 12px 24px; /* Adjust padding for mobile */
+  font-size: 16px; /* Decrease the font size for mobile */
   background-color: #3e92cc;
   color: white;
   border: none;
@@ -19,7 +19,7 @@ button:hover {
 
 body {
   background-image: url("background.jpg");
-  background-size: 100% auto;
+  background-size: cover; /* Use "cover" for better mobile background */
   background-repeat: no-repeat;
   background-position: center top -150px;
 }
@@ -34,13 +34,21 @@ h2 {
 
 p {
   color: #333333;
-  font-size: 50px;
+  font-size: 32px; /* Decrease the font size for mobile */
 }
 
 @media (max-width: 600px) {
   /* Adjust the max-width value as needed */
+  .container {
+    margin-top: 10px; /* Further decrease the margin for mobile */
+  }
+
   button {
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 8px 16px; /* Adjust padding for smaller screens */
+    font-size: 14px; /* Decrease the font size for smaller screens */
+  }
+
+  p {
+    font-size: 24px; /* Decrease the font size for smaller screens */
   }
 }
