@@ -11,7 +11,6 @@ button {
   color: white;
   border: none;
   border-radius: 5px;
-  
 }
 
 button:hover {
@@ -23,17 +22,14 @@ button:hover {
   background-color: #ff0000;
   color: #ffffff;
   position: center;
-  
 }
 
-.gobacks-button{
-margin-top: 70px;
+.gobacks-button {
+  margin-top: 70px;
   background-color: #ff0000;
   color: #ffffff;
-  margin-left: 45.5%;	
+  margin-left: 45.5%;
 }
-
-
 
 body {
   background-image: url("background.jfif");
@@ -44,15 +40,17 @@ body {
 
 h1 {
   color: #ffffff; /* White color */
+  font-size: 20px;
 }
 
 h2 {
   color: #ffffff; /* Vibrant yellow color */
+  font-size: 20px;
 }
 
 p {
   color: #ffffff; /* Dark gray color */
-  font-size: 50px;
+  font-size: 40px;
 }
 
 @media (max-width: 600px) {

@@ -5,83 +5,11 @@ let familyName;
 let selectedStudent;
 
 const students = [
-  { name: 'محمد أمين الفيلالي', classChoice: 's10', level: '1', score: 19.5 },
-  { name: 'ملاك حمام', classChoice: 's10', level: '1', score: 17 },
-  { name: 'نورس بنمحفوظ', classChoice: 's10', level: '1', score: 9 },
-  { name: 'شمس الدين القماطي', classChoice: 's10', level: '1', score: 5.5 },
-  { name: 'مجدي باي', classChoice: 's10', level: '1', score: 5 },
-  { name: 'يحي رجب', classChoice: 's10', level: '1', score: 14.5 },
-  { name: 'يوسف صالحي', classChoice: 's10', level: '1', score: 7 },
-  { name: 'محمد الحبيب المهتلي', classChoice: 's10', level: '1', score: 13.5 },
-  { name: 'سيرين المحمدي', classChoice: 's10', level: '1', score: 5 },
-  { name: 'فاطمة علية حسينة', classChoice: 's10', level: '1', score: 18 },
-  { name: 'فاطمة الزهراء القماطي', classChoice: 's10', level: '1', score: 9 },
-  { name: 'فاطمة التاجوري', classChoice: 's10', level: '1', score: 6 },
-  { name: 'لميس الاسود', classChoice: 's10', level: '1', score: 19 },
-  { name: 'سندة حمام', classChoice: 's10', level: '1', score: 15 },
-  { name: 'نيجار المكاري', classChoice: 's10', level: '1', score: 10 },
-  { name: 'يوسف القربي', classChoice: 's10', level: '1', score: 5.5 },
-  { name: 'ملاك القابسي', classChoice: 's10', level: '1', score: 11 },
-  { name: 'مي بنرحومة', classChoice: 's10', level: '1', score: 2.5 },
-  { name: 'مرام القصوري', classChoice: 's10', level: '1', score: 8.5 },
-  { name: 'زينب الحجري', classChoice: 's10', level: '1', score: 9.5 },
-  { name: 'حمزة اليزيدي', classChoice: 's10', level: '1', score: 14.5 },
-  { name: 'رندلين بننصر', classChoice: 's10', level: '1', score: 14 },
-  { name: 'سليمة الشوشاني', classChoice: 's10', level: '1', score: 12.5 },
-  { name: 'رغد بنالكيلاني', classChoice: 's10', level: '1', score: 19.5 },
-  { name: 'امنة شويخة', classChoice: 's10', level: '1', score: 6 },
-  { name: 'زيد لشهب', classChoice: 's10', level: '1', score: 17.5 },
-  { name: 'اسماء المهذبي', classChoice: 's10', level: '1', score: 16 },
-  { name: 'الاء الطرابلسي', classChoice: 's10', level: '1', score: 12.5 },
-  { name: 'رانبة بنفظل', classChoice: 's10', level: '1', score: 9.5 },
-  { name: 'امان الله الاسود', classChoice: 's10', level: '1', score: 17.5 },
-  { name: 'دينا الاندلسي', classChoice: 's10', level: '1', score: 10.5 },
-  { name: 'اسراء الطرابلسي', classChoice: 's10', level: '1', score: 11.5 },
-  { name: 'حازم بنمحمد', classChoice: 's10', level: '1', score: 18 },
-  { name: 'الاء كحلون', classChoice: 's10', level: '1', score: 17.5 },
-  { name: 'اية المؤدب', classChoice: 's10', level: '1', score: 19.5 },
-  { name: 'رنا السنوسي', classChoice: 's10', level: '1', score: 12.5 },
-  { name: 'ادم صالح', classChoice: 's10', level: '1', score: 19.5 },
-  { name: 'زينب البرصالي', classChoice: 's13', level: '1', score: 19.5 },
-  { name: 'مرام بنابراهيم', classChoice: 's13', level: '1', score: 8 },
-  { name: 'ميساء بنخيرية', classChoice: 's13', level: '1', score: 4.5 },
-  { name: 'محمد امين الحري', classChoice: 's13', level: '1', score: 2.5 },
-  { name: 'محمد كمال القربي', classChoice: 's13', level: '1', score: 5 },
-  { name: 'محمد بوزيد', classChoice: 's13', level: '1', score: 2.5 },
-  { name: 'علي التليلي', classChoice: 's13', level: '1', score: 7 },
-  { name: 'جاد سالم', classChoice: 's13', level: '1', score: 5.5 },
-  { name: 'عبد القادر الغربي', classChoice: 's13', level: '1', score: 6 },
-  { name: 'شهم بنعلية', classChoice: 's13', level: '1', score: 8.5 },
-  { name: 'زين الدين بنمعاوية', classChoice: 's13', level: '1', score: 17 },
-  { name: 'ويام الحجري', classChoice: 's13', level: '1', score: 6 },
-  { name: 'انس العويني', classChoice: 's13', level: '1', score: 16 },
-  { name: 'يوسف ساسي', classChoice: 's13', level: '1', score: 5 },
-  { name: 'ياسين بنعزونة', classChoice: 's13', level: '1', score: 4.5 },
-  { name: 'ملاك التليلي', classChoice: 's13', level: '1', score: 8.5 },
-  { name: 'يسر بنساسي', classChoice: 's13', level: '1', score: 13.5 },
-  { name: 'غفران الشعباني', classChoice: 's13', level: '1', score: 7 },
-  { name: 'رنيم المهتلي', classChoice: 's13', level: '1', score: 14 },
-  { name: 'ياسمين اليزيدي', classChoice: 's13', level: '1', score: 8 },
-  { name: 'بلقيس المستور', classChoice: 's13', level: '1', score: 13 },
-  { name: 'محمد بنسليمان', classChoice: 's13', level: '1', score: 7 },
-  { name: 'منار تيرة', classChoice: 's13', level: '1', score: 16 },
-  { name: 'ريان حوالة', classChoice: 's13', level: '1', score: 15 },
-  { name: 'اية بنسلطانة', classChoice: 's13', level: '1', score: 12.5 },
-  { name: 'رتاج التونسي', classChoice: 's13', level: '1', score: 13.5 },
-  { name: 'هديل بنسلطانة', classChoice: 's13', level: '1', score: 7.5 },
-  { name: 'اسماء الصفاقسي', classChoice: 's13', level: '1', score: 12 },
-  { name: 'حمزة القاسمي', classChoice: 's13', level: '1', score: 2 },
-  { name: 'فرح الحري', classChoice: 's13', level: '1', score: 7.5 },
-  { name: 'محمد امين النويصر', classChoice: 's13', level: '1', score: 1.5 },
-  { name: 'عصام بنعزيزة', classChoice: 's13', level: '1', score: 0 },
-  { name: 'اية حمام', classChoice: 's13', level: '1', score: 17.5 },
-  { name: 'زينب المهذبي', classChoice: 's13', level: '1', score: 15 },
-  { name: 'ابتهال الصغير', classChoice: 's13', level: '1', score: 12.5 },
-  { name: 'شيماء دبيش', classChoice: 's13', level: '1', score: 17 },
-  { name: 'الاء المهذبي', classChoice: 's13', level: '1', score: 13.5 },
-  { name: 'سارة بوريسة حمام', classChoice: 's13', level: '1', score: 19 },
-  { name: 'روى بنعلية', classChoice: 's13', level: '1', score: 19.5 }
-  
+  { name: 'يلالي', classChoice: 's10', level: '1', score: 9 },
+  { name: 'مام', classChoice: 's10', level: '1', score: 15 },
+  { name: 'م', classChoice: 's10', level: '1', score: 10 },
+  { name: 'ام', classChoice: 's10', level: '1', score: 5 }
+ 
 ];
 
 
@@ -119,21 +47,24 @@ function checkFamilyName() {
   );
 
   if (matchingStudent) {
-    const score = matchingStudent.score;
-    const scoreElement = document.getElementById('score');
+  const score = matchingStudent.score;
+  const scoreElement = document.getElementById('score');
 
-    if (score >= 15) {
-      const bravoEmoji = "\uD83D\uDC4F";
-      scoreElement.textContent =  bravoEmoji +  score + ' :' +'  ممتاز ' + " '' "+familyName + " '' "+ ' لقد تحصلت على المعدل '     ;
-	
-    } else if (score < 10) {
-      const courageEmoji = "\uD83D\uDCAA";
-      scoreElement.textContent = courageEmoji + score + " :"  + familyName  + " '' "+'  محاولة جيدة! يمكنك القيام بذلك بشكل أفضل، ثق بنفسك   ' +" '' " ;
-    } else if (score >= 10 && score < 15) {
-      const motivationEmoji = "\uD83D\uDE4C";
-      scoreElement.textContent = motivationEmoji + score + " :" +  familyName + " '' "+ '  أنت قريب من القمة، استمر'+" '' " ;
-    }
-  } else {
+  if (score >= 15 && score <= 20) {
+    const perfectEmoji = "🏆";
+    scoreElement.textContent = perfectEmoji + score + ": نتائج مشرفة ! استمر هكذا، " + familyName + "!";
+  } else if (score >= 10 && score < 15) {
+    const goodEmoji = "👏";
+    scoreElement.textContent = goodEmoji + score + ": درجات جيدة! يمكنك تحقيق المزيد، " + familyName + ".";
+  } else if (score >= 6 && score < 10) {
+    const canDoMoreEmoji = "💪";
+    scoreElement.textContent = canDoMoreEmoji + score + ": عليك بمضاعفة المجهود ، " + familyName + ". استمر في العمل!";
+  } else if (score >= 0 && score < 6) {
+    const workMoreEmoji = "📚";
+    scoreElement.textContent = workMoreEmoji + score + ": تحتاج إلى العمل بجد أكثر، " + familyName + ".";
+  }
+}
+ else {
     alert(`لم يتم العثور على تلميذ(ة)  بهذا الإسم : ${familyName}`);
   }
 }
