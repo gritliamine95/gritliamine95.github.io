@@ -33,7 +33,7 @@ button:hover {
 
 body {
   background-image: url("background.jfif");
-  background-size: cover;
+  background-size: 150% 150%;
   background-repeat: no-repeat;
   background-position: center top;
 }
