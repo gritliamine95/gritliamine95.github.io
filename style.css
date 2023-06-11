@@ -65,3 +65,37 @@ p {
     font-size: 18px;
   }
 }
+
+ #resultsContainer {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: gray black;
+	margin-left: 45%;
+  }
+
+  .resultItem {
+    cursor: pointer;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+    background-color: black;
+    margin-bottom: 5px;
+    color: white;
+    width: 150px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .resultItem.selected {
+    background-color: white;
+    color: black;
+  }
+
+  .resultItem:hover {
+    background-color: #333;
+  }

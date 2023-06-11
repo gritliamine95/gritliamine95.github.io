@@ -182,3 +182,61 @@ function readCSVFile(file) {
 		alert(newStudent.name + ", " + newStudent.classChoice + ", " + newStudent.level + ", " + newStudent.score);
       }
     }
+	
+	// Function to filter students based on entered name
+// Function to filter students based on entered name
+// Function to filter students based on entered name
+function filterStudents() {
+    const enteredName = document.getElementById('familyName').value;
+    const resultsContainer = document.getElementById('resultsContainer');
+    const results = resultsContainer.getElementsByClassName('resultItem');
+    const classChoice = getClassChoiceFromURL(); // Get class choice from URL
+
+    // Remove previous selection
+    for (let i = 0; i < results.length; i++) {
+      results[i].classList.remove('selected');
+    }
+
+    filteredStudents = students.filter(student =>
+      student.name.startsWith(enteredName) &&
+      student.classChoice === classChoice // Filter by class choice
+    );
+
+    // Sort the filtered results alphabetically
+    filteredStudents.sort((a, b) => a.name.localeCompare(b.name));
+
+    // Display filtered results
+    resultsContainer.innerHTML = '';
+
+    filteredStudents.forEach(student => {
+      const studentDiv = document.createElement('div');
+      studentDiv.textContent = student.name;
+      studentDiv.classList.add('resultItem');
+      studentDiv.addEventListener('click', () => selectStudent(studentDiv));
+      resultsContainer.appendChild(studentDiv);
+    });
+  }
+
+  // Function to get the class choice from the URL parameter
+  function getClassChoiceFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const classChoice = urlParams.get('classChoice');
+    return classChoice;
+  }
+
+  // Function to select a student
+  function selectStudent(studentDiv) {
+    const results = document.getElementsByClassName('resultItem');
+
+    // Remove previous selection
+    for (let i = 0; i < results.length; i++) {
+      results[i].classList.remove('selected');
+    }
+
+    // Apply selection to the clicked student
+    studentDiv.classList.add('selected');
+
+    // Add the selected name to the input field
+    const familyName = document.getElementById('familyName');
+    familyName.value = studentDiv.textContent;
+  }

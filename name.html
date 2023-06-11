@@ -17,7 +17,11 @@
 	<div> 
    <p> </p>
    </div>
-    <input type="text" id="familyName" oninput="handleInput()" placeholder="قم بإدخال اسمك بالعربية">
+    <input type="text" id="familyName" oninput="filterStudents()" placeholder="قم بإدخال اسمك بالعربية">
+	
+   <div id="resultsContainer"></div>
+
+
     <button onclick="checkFamilyName()">تأكيد</button>
 	<p id="score"> </p>
 	<button onclick="goBack()" class="goback-button">Go Back</button>
