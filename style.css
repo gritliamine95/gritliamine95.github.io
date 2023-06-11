@@ -38,6 +38,7 @@ margin-top: 70px;
 body {
   background-image: url("background.jfif");
   background-size: cover;
+  background-repeat: no-repeat;
   
   
 }
