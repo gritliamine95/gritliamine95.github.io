@@ -41,6 +41,8 @@ body {
   background-repeat: no-repeat;
   
   
+  
+  
 }
 
 h1 {
@@ -72,10 +74,27 @@ p {
     padding: 10px;
     border-radius: 5px;
     max-height: 200px;
-    overflow-y: auto;
+    overflow-y: scroll; /* Use 'scroll' instead of 'auto' */
     scrollbar-width: thin;
     scrollbar-color: gray black;
-	margin-left: 45%;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 10%;
+  }
+
+  /* Hide the default scrollbar */
+  #resultsContainer::-webkit-scrollbar {
+    width: 7px;
+	height: 2px;
+  }
+
+  #resultsContainer::-webkit-scrollbar-track {
+    background: black;
+  }
+
+  #resultsContainer::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 5px;
   }
 
   .resultItem {
@@ -98,4 +117,11 @@ p {
 
   .resultItem:hover {
     background-color: #333;
+  }
+  
+  #familyName {
+    width: 300px; /* Adjust the width as needed */
+    padding: 5px;
+    margin-bottom: 10px;
+	text-align: center; /* Align the text in the middle */
   }
