@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="style.css">
   <script src="script.js"></script>
   <script src="students.xlsx"></script>
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.min.css" />
+  
 
 </head>
 
@@ -20,14 +22,22 @@
     <input type="text" id="familyName" oninput="filterStudents()" placeholder="قم بإدخال اسمك بالعربية">
 	
    <div id="resultsContainer"></div>
-
+	<div>
+	<input type="text" id="parentName" placeholder="قم بإدخال اسم الولي ">
+	</div>
 
     <button onclick="checkFamilyName()">تأكيد</button>
 	<p id="score"> </p>
-	<button onclick="goBack()" class="goback-button">Go Back</button>
+	<button onclick="goBack()" class="goback-button">رجوع</button>
     
 	
-  </div>
-</body>
+
+
+
+<div class="logo-container">
+        <a href="index.html">
+            <img src="lt.png" alt="Logo" class="logo">
+        </a>
+    </div>
 
 </html>
