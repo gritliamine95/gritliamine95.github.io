@@ -126,6 +126,12 @@ p {
 	text-align: center; /* Align the text in the middle */
   }
   
+  #parentName {
+    width: 300px; /* Adjust the width as needed */
+    padding: 5px;
+    margin-bottom: 10px;
+	text-align: center; /* Align the text in the middle */
+  }
  .logo-container {
     position: fixed;
     bottom: 0;
