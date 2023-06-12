@@ -43,7 +43,7 @@ margin-top: 70px;
 
 body {
   background-image: url("t1.jfif");
-  background-size: 150% auto;
+  background-size: 160% auto;
   background-repeat: no-repeat; 
   height: 100vh;
   
@@ -136,17 +136,5 @@ p {
     margin-bottom: -50px;
 	text-align: center; /* Align the text in the middle */
   }
- .logo-container {
-    position: fixed;
-    bottom: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 10px;
-    z-index: 9999; /* Adjust the z-index as needed */
-    text-align: center;
-}
 
-.logo {
-    width: 100px; /* Adjust the width as needed */
-    height: auto; /* Adjust the height as needed */
-} 
+
